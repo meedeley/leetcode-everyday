@@ -1,74 +1,21 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
+	value := "MENINGGAL"
+	reversed := ""
 
-	// happy := "Happy "
-	// learn := "Learn"
-
-	// result := happy + learn;
-	// fmt.Println(result)
-
-	var nums = [8]int{
-		0,1, 2, 3, 4, 5, 5, 4,
-	}
-	// var result = removeDuplicates(nums[:])
-
-	// fmt.Println(result)
-
-	prev := nums[0]
-	i := 1
-
-	fmt.Println("ANGKA PERTAMA : ", prev, i)
-
-	fmt.Println("Panjang Nums : ", len(nums))
-	for j := 1; j < len(nums); j++ {
-
-		fmt.Println("====== Iterasi J", j, "=======")
-		if nums[j] != prev { // Jika Nums Index J Nilanya Tidak Sama Dengan Prev Nilainya Maka Prev Isinya == nums[j]
-
-			fmt.Println(" ")
-			fmt.Println("Prev Increment", prev)
-			fmt.Println(" ")
-			fmt.Println(" ")
-			nums[i] = nums[j] // Nums Dengan Index
-
-			fmt.Println("Increment i :", i)
-			fmt.Println("Variabel I : ", nums[i])
-			fmt.Println("Variabel J : ", nums[j])
-
-			i++ // Lalu I Increment
-			fmt.Println(" ")
-			fmt.Println(" ")
-			fmt.Println("Akhir Iterasi Ke-", prev)
-			fmt.Println(" ")
-			fmt.Println(" ")
-		}
-
-		prev = nums[j]
+	for _, s := range value {
+		reversed = string(s) + reversed
 	}
 
-	fmt.Println("Hasil :", i)
+	fmt.Println(value == reversed)
 }
 
-// prev := nums[0]
-// 	l := 1
-// 	for i := 1; i < len(nums); i++ {
-// 		if nums[i] != prev {
-// 			nums[l] = nums[i]
-// 			l++
-// 		}
-// 		prev = nums[i]
+// func isPalindrome(x int) bool {
+ 
+// 	for i := 0; i < len(x); i++ {
+
 // 	}
-// 	return l
-
-/*
-j itu iterasi dari 1 ke panjang nums nya
-
-jika nums di index j saat iterasi sama dengan nums di index i maka i++ (bertambah)
-
-
-*/
+// }
