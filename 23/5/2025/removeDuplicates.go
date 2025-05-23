@@ -1,17 +1,20 @@
 package main
 
-import (
-	"fmt"
-)
+func RemoveDuplicates(nums []int) int {
+	prev := nums[0]
+	i := 1
+	for j := 1; j < len(nums); j++ { 
+		if nums[j] != prev {
+			nums[i] = nums[j]
+			i++
+		}
 
-func main() {
+		prev = nums[j]
+	}
+	return i;
+}
 
-	// happy := "Happy "
-	// learn := "Learn"
-
-	// result := happy + learn;
-	// fmt.Println(result)
-
+/*
 	var nums = [8]int{
 		0,1, 2, 3, 4, 5, 5, 4,
 	}
@@ -52,23 +55,4 @@ func main() {
 	}
 
 	fmt.Println("Hasil :", i)
-}
-
-// prev := nums[0]
-// 	l := 1
-// 	for i := 1; i < len(nums); i++ {
-// 		if nums[i] != prev {
-// 			nums[l] = nums[i]
-// 			l++
-// 		}
-// 		prev = nums[i]
-// 	}
-// 	return l
-
-/*
-j itu iterasi dari 1 ke panjang nums nya
-
-jika nums di index j saat iterasi sama dengan nums di index i maka i++ (bertambah)
-
-
 */
